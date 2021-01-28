@@ -1,0 +1,47 @@
+- 
+    var news = [
+        {time: "2019-04-16", title: "simply dummy text of the printing"},
+        {time: "2019-04-16", title: "like readable English like readable English Many f the printing desktop."},
+        {time: "2019-04-16", title: "simply dummy text of the printing like readable English."},
+        {time: "2019-04-16", title: "like readable English text of the printing like readable like readable English Many desktop."},
+        {time: "2019-04-16", title: "like readable English like rreadable Many desktop. eadable English text of the printing like "},
+        {time: "2019-04-16", title: "simply dummy text of the printing "},
+        {time: "2019-04-16", title: "like readable English like readable English Many f the printing desktop."},
+        {time: "2019-04-16", title: "simply dummy text of the printing like readable English."},
+        {time: "2019-04-16", title: "like readable English text of the printing like readable like readable English Many desktop."},
+        {time: "2019-04-16", title: "like readable English like rreadable Many desktop. eadable English text of the printing like "},
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#news_list
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/news/list/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item") News
+                            meta(itemprop="position" content="2")
+        main
+            .container.mt-110.mb-70
+                h1.fs_45.black_color.text-center.mb-70 News
+                ul.row.newsListRoot
+                    each val in news
+                        li.col-xs-12.newsList
+                            .newsList-list
+                                a.newsList-link(href="javascript:;")
+                                    time.newsList__time.fs_16=val.time
+                                    p.newsList__title.fs_20=val.title
+            .container
+                a.button.button--primary.button--block.white_color.fs_20.text-center.mb-100(href="javascript:;") Learn More
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

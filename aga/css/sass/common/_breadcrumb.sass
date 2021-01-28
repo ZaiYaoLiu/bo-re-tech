@@ -1,0 +1,29 @@
+.breadcrumb
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &Root
+        display: flex
+        align-items: center
+        padding: 18px 0
+        text-transform: none
+        span
+            align-self: flex-start;
+            margin-right: 5px
+            color: #9A9B9C
+    &-li
+        & ~ .breadcrumb-li
+            padding-left: 10px
+            &:before
+                display: inline-block
+                padding-right: 10px
+                color: #9A9B9C
+                content: "\\"
+        a
+            color: 
+            &:hover
+                opacity: .8
+        &:last-of-type
+            a
+                color: #888888
+            

@@ -1,0 +1,181 @@
+.list
+    &-style
+        &--disc
+            li
+                padding-left: 20px
+                position: relative
+                &:before
+                    content: ''
+                    position: absolute
+                    width: 4px
+                    height: 4px
+                    border-radius: 50%
+                    background-color: #000
+                    left: 5px
+                    top: 6px
+                &:not(:last-of-type)
+                    margin-bottom: 16px
+    
+.numList
+    list-style: decimal-leading-zero
+    &__li
+        &:not(:last-of-type)
+            margin-bottom: 18px
+    
+.link
+    &:not(:last-of-type)
+        margin-bottom: 15px
+    &Root
+        display: flex
+        flex-direction: column
+    &__href
+        color: #333
+        display: inline-block
+        &:hover
+            color: $primary
+        &--block
+            display: block
+            &:hover
+                color: #333
+            a
+                color: $primary
+                &:hover
+                    letter-spacing: 1.1px
+                    color: $primary_2
+    
+.twoList
+    // white-space: nowrap
+    &-title
+        display: inline-flex
+        flex-direction: column
+        &:hover
+            color: $primary
+    &-li
+        &__p
+            color: rgba(#333,.7)
+            margin-bottom: 22px
+            display: inline-block
+        &--firstFloor
+            a
+                position: relative
+                &:after
+                    content: ''
+                    position: absolute
+                    bottom: -10px
+                    width: 0%
+                    border-bottom: 2px solid $primary
+                    left: 50%
+                    transform: translateX(-50%)
+                    margin-left: 14px
+                    transition: all .3s
+                &:hover
+                    &:after
+                        width: calc(100% + 35px)
+    &-secondFloor
+        margin-left: 20px
+        &--page
+            list-style-type: disc
+            .secondFloor-li
+                a
+                    margin-bottom: 20px
+                    &:hover
+                        color: $primary
+    &:hover
+        display: block
+    a.twoList-li__p
+        color: #333
+        margin-bottom: 22px
+        &:hover
+            color: $primary
+    &--navbar
+        white-space: nowrap
+        position: absolute
+        left: pxTovw(-30)
+        top: calc(100% - 6px)
+        border-top: 6px solid $primary
+        background-color: rgba(0,0,0,.8)
+        padding: 25px pxTovw(75) 25px pxTovw(30)
+        z-index: 1
+        display: none
+        .twoList
+            &-li
+                &__p
+                    margin-bottom: 30px
+                    color: rgba(255,255,255,.7)
+            &-secondFloor
+                margin-left: 45px
+        a.twoList-li__p
+            color: #fff
+            margin-bottom: 35px
+        .secondFloor
+            &-li
+                margin-bottom: 35px
+                a
+                    color: #fff
+                    margin-bottom: 0
+                    &:after
+                        content: ''
+                        position: absolute
+                        bottom: -10px
+                        width: 0%
+                        border-bottom: 2px solid $primary
+                        left: 50%
+                        transform: translateX(-50%)
+                        margin-left: 14px
+                        transition: all .3s
+                    &:hover
+                        &:after
+                            width: calc(100% + 35px)
+
+.secondFloor
+    &-li
+        position: relative
+        a
+            position: relative
+            display: inline-block
+            color: #333
+            margin-bottom: 22px
+            &:hover
+                color: $primary
+
+.info
+    color: #333
+    .icon
+        margin-right: 12px
+        min-width: 25px
+        +flex
+    &-title
+        color: #333
+        margin-bottom: 20px
+    &-list
+        display: flex
+        align-items: center
+        &:not(:last-of-type)
+            margin-bottom: 12px
+    &Root
+        &:not(:last-of-type)
+            margin-bottom: 40px
+
+.newsList
+    
+    &-list
+        padding: 18px 0
+        border-bottom: 1px solid #CCCCCC
+    &:first-of-type
+        .newsList-list
+            padding-top: 0
+    &:last-of-type
+        .newsList-list
+            padding-bottom: 0
+            border-bottom: none
+    &-link
+        color: #333
+        display: flex
+        align-items: center
+        &:hover
+            color: $primary
+    &__time
+        min-width: 100px
+        margin-right: 40px
+    &__title
+        line-height: 1.5

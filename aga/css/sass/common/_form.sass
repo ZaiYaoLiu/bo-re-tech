@@ -1,0 +1,130 @@
+.form
+    &__subtitle
+        padding-left: 60px
+        font-size: px(30)
+    &-label
+        display: flex
+        align-items: center
+        position: relative
+        margin: 25px 0
+        +rwdw(767)
+            flex-wrap: wrap
+        &--smallGutter
+            margin: 13px 0
+        &--required
+            .form-label__title
+                &:after
+                    content: '*'
+                    font-size: px(18)
+                    color: #B70012
+                    margin-left: 2px
+        &--textarea
+            .form-label
+                &__title
+                    align-self: flex-start
+                &__input
+                    min-height: 120px
+                    resize : none
+        &--code
+            .form-label
+                &__input
+                    max-width: 300px
+                    +rwdw(767)
+                        width: calc(100% - 120px)
+        &__inputNone
+            position: absolute
+            opacity: 0
+            &:checked 
+                & + .form-label__radio
+                    background-color: $primary
+                    border-color: $primary
+                & + .form-label__checkbox
+                    background-color: $primary
+                & + .form-label__title
+                    background-color: $primary
+                    color: #fff
+                .form-check__input:focus
+        &__radio
+            min-width: 15px
+            min-height: 15px
+            border-radius: 50%
+            border: 2px solid #868687
+            margin-right: 20px
+        &__checkbox
+            min-width: 17px
+            min-height: 17px
+            background-color: #EEEEEE
+            margin-right: 10px
+        &__title
+            min-width: 155px
+            max-width: 155px
+            margin: 10px 0
+            &:last-child
+                margin-bottom: 10px
+            +rwdw(767)
+                max-width: none
+                width: 100%
+        &__input
+            border: none
+            padding: 18px
+            background-color: #EEEEEE
+            width: 100%
+            border: 1px solid transparent
+            &:focus
+                border-color: $primary
+        &__code
+            padding: 17.5px 20px
+            background-color: #EEEEEE
+            margin-left: 20px
+            img
+                max-width: 60px
+                max-height: 20px
+    &-check
+        display: flex
+        align-items: center
+        flex: 1
+        &__input
+            border: none
+            border-bottom: 2px solid #333333
+            margin-left: 16px
+            max-width: 550px
+            flex: 1
+
+    &-select
+        margin-left: 25px
+    &-block
+        margin: 40px 0
+        &__title
+            color: #000
+            span
+                color: #B70012
+    &-checkBox
+        display: flex
+        flex-wrap: wrap
+        &-label
+            position: relative
+            display: flex
+            align-items: center
+            margin: 3px 0
+            .form-label
+                &__input
+                    position: absolute
+    &-button
+        &-label
+            margin: 3px 0
+            .form-label
+                &__title
+                    margin: 0
+                    padding: 5px
+                    text-align: center
+                    background-color: #EEEEEE
+                    max-width: none
+                    cursor: pointer
+                    min-height: 70px
+                    max-height: 70px
+                    +flex
+
+    .fs_18 + .form-check
+        margin: 20px 0 20px 25px
+        .form-check__input
+            margin-left: 0

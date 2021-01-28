@@ -1,0 +1,65 @@
+.community
+    &Root
+        display: flex
+        align-items: center
+        padding: 10px 0
+        flex: 1
+        .icon
+            font-size: px(18)
+            color: rgba(#fff, .6)
+            margin: 0 5px
+            width: 40px
+            height: 40px
+            +flex
+            &:hover
+                color: #fff
+        .icon-email
+            &:hover
+                background-color: #0068B2
+        .icon-facebook
+            &:hover
+                background-color: #3B5998
+        .icon-youtube
+            font-size: px(21)
+            &:hover
+                background-color: #FF0000
+        .icon-qq
+            &:hover
+                background-color: #01A3E3
+        .icon-wechat
+            &:hover
+                background-color: #61A622
+    
+.aside-community
+    position: fixed
+    z-index: 999
+    right: 5px
+    top: 50%
+    transform: translateY(-50%)
+    .icon
+        width: 65px
+        height: 65px
+        +flex
+        color: #fff
+        font-size: px(24)
+        &:not(:last-of-type)
+            margin-bottom: 3px
+        &:hover
+            i
+                transform-style: preserve-3d
+                animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both
+    +rwdw(991)
+        display: none
+
+.share
+    display: flex
+    padding-bottom: 10px
+    border-bottom: 1px solid #eee
+    &-title
+        display: flex
+        align-items: center
+        margin-left: auto
+        &__title
+            margin-right: 18px
+    .icon
+        color: #3B5998

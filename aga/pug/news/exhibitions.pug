@@ -1,0 +1,43 @@
+mixin exhibit(img, title, time)
+    li.col-md-4.col-sm-6
+        a(href="detail.html")
+            .card-img.mb-30
+                img(src= img, alt="")
+            p.fs_22.text-center.mb-20= title
+            p.black_light_color.text-center.fs_16= time
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#news_exhibitions
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/news/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Exhibitions
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-100
+                h1.fs_45.black_color.text-center.mb-70 Exhibitions
+                ul.row.card
+                    +exhibit("../UserFiles/home/exhibitions_01_460_285.jpg", "CHINAPLAS 2019-China", "2019, Oct 16~23")
+                    +exhibit("../UserFiles/home/exhibitions_02_460_285.jpg", "K-SHOW 2019", "2019, Oct 16~23")
+                    +exhibit("../UserFiles/home/exhibitions_03_460_285.jpg", "Vietnam Plas 2019", "2019, Oct 16~23")
+                    +exhibit("../UserFiles/home/exhibitions_01_460_285.jpg", "CHINAPLAS 2019-China", "2019, Oct 16~23")
+                    +exhibit("../UserFiles/home/exhibitions_02_460_285.jpg", "K-SHOW 2019", "2019, Oct 16~23")
+                    +exhibit("../UserFiles/home/exhibitions_03_460_285.jpg", "Vietnam Plas 2019", "2019, Oct 16~23")
+                .container
+                    a.button.button--primary.button--block.white_color.fs_20.text-center(href="javascript:;") Learn More
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

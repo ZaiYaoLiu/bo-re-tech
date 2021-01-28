@@ -1,0 +1,49 @@
+.box
+    display: flex
+    flex-wrap: wrap
+    &-li
+        &-img
+            overflow: hidden
+            img
+                transition: .5s
+                display: block
+                width: 100%
+        a
+            transition: transform .5s
+            display: inline-block
+            &:hover
+                transform: translateX(10px)
+        span
+            display: block
+            color: rgba(#000, .6)
+        &:hover
+            background-color: $primary
+            li
+                &:before
+                    background-color: #fff
+            h3, a, div
+                color: #fff
+            span
+                color: rgba(#fff, .6)
+            img
+                transform: scale(1.05) rotate(0.02deg)
+        +rwdw(767)
+            width: 100%
+            margin-left: 20px
+            margin-right: 20px
+
+.card
+    &-img
+        border: 1px solid #E3E3E3
+        transition: .5s
+        overflow: hidden
+    img
+        width: 100%
+        transition: .5s
+    li
+        margin-bottom: 80px
+    a:hover
+        .card-img
+            border-color: $primary
+        img
+            transform: scale(1.05) rotate(0.02deg)

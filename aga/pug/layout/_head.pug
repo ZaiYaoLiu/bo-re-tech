@@ -1,0 +1,27 @@
+head(itemscope itemtype="http://schema.org/WebSite")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title(itemprop="name") 浙江寶綠特環保技術工程有限公司 - PRM Taiwan
+    meta(name="description" content="浙江寶綠特環保技術工程有限公司，坐落於嘉興平湖市，前身於1991年在台灣成立第一家聚酯回收清洗廠，是一家擁有20年PET瓶及其它塑料瓶回收處理與15年聚酯短纖生產經驗的環保機械暨塑料再生企業。我們豐富的製造經驗成為我們規劃、設計與製造塑料環保機械的最大支柱。尤其在PET瓶再生回收的領域上，除提供整廠輸出或單一設備之技術外，也實際營運再生PET 各類原料及上下游產品之製造、銷售。在此優異的條件下，本公司所提供的設備及技術方案是經實際操作驗證，且規劃設計的精神完全融合操作及經營者所需。")
+    meta(name="keywords" content="PRM Taiwan | 浙江寶綠特環保技術工程有限公司")
+    //- link(rel="stylesheet", href="../fonts/icommon/style.css")
+    //- link(rel="stylesheet", href="../js/swiper/swiper.min.css")
+    link(rel="stylesheet", href="../css/styles.css")
+    //- link(rel="stylesheet", href="../css/index.css")
+    script.
+        function loadCSS(url) {
+            try {
+                document.createStyleSheet(url);
+            } catch(e) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                //link.type = 'text/css';
+                link.href = url;
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+        }
+        loadCSS('../fonts/icommon/style.css')
+        loadCSS('../js/swiper/swiper.min.css')
+        loadCSS('../js/jquery-modal-video/modal-video.min.css')
+        loadCSS('../css/index.css')

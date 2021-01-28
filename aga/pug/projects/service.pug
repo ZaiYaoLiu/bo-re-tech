@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#projects_service
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/projects/service/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Service Point
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-100
+                h1.fs_45.black_color.text-center.mb-70 Service Point
+                section.row.mb-50
+                    .col-xs-12
+                        .tags-list
+                            .tags-dropDown
+                                .tags-dropDown-title.js-tags-dropDown
+                                    .tags-dropDown__title All
+                                    .tags-dropDown__button
+                                .tags-dropDown-content
+                                    .tags-titleRoot.fs_18
+                                        button.tags-titleRoot__title.tags-titleRoot__title--active.js-tags-select All
+                                        button.tags-titleRoot__title.js-tags-select Asia
+                                        button.tags-titleRoot__title.js-tags-select North America
+                                        button.tags-titleRoot__title.js-tags-select South America
+                                        button.tags-titleRoot__title.js-tags-select Europe
+                                        button.tags-titleRoot__title.js-tags-select Africa
+                            .tags-content.fs_18.js-tags-num
+                                p.mb-10 Countries we cover
+                                ul.d-flex.flex-wrap
+                                    li.tags-content__p(data-local="Asia") Bangladesh
+                                    li.tags-content__p(data-local="Asia") China
+                                    li.tags-content__p(data-local="Asia") India
+                                    li.tags-content__p(data-local="Asia") Indonesia
+                                    li.tags-content__p(data-local="Asia") Japan
+                                    li.tags-content__p(data-local="Asia") Malaysia
+                                    li.tags-content__p(data-local="Asia") Maldives
+                                    li.tags-content__p(data-local="Asia") Russia
+                                    li.tags-content__p(data-local="Asia") Taiwan
+                                    li.tags-content__p(data-local="Asia") Uzbekistan
+                                    li.tags-content__p(data-local="Asia") Iran
+                                    li.tags-content__p(data-local="Asia") Pakistan
+                                    li.tags-content__p(data-local="Asia") Saudi
+                                    li.tags-content__p(data-local="Asia") Arabia
+                                    li.tags-content__p(data-local="North America") United
+                                    li.tags-content__p(data-local="Asia") Arab
+                                    li.tags-content__p(data-local="Asia") Emirates
+                section.row
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 BoReTech Environmental Engineering co., ltd.
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-mark
+                                p No.888, Jiuliting Avenue, Caoqiao Street, Pinghu, China.
+                            li.info-list
+                                i.icon.icon-phone
+                                a(href="tel:+86-573-8512-0186") +86-573-8512-0186 
+                            li.info-list
+                                i.icon.icon-fax
+                                a(href="tel:+86-573-8511-3959") +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                a(href="mailto:sales@bo-re-tech.com") sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Sales and Project Development
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-phone
+                                a(href="tel:+86-573-8512-0186") +86-573-8512-0186 
+                            li.info-list
+                                i.icon.icon-fax
+                                a(href="tel:+86-573-8511-3959") +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                a(href="mailto:sales@bo-re-tech.com") sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Planning Department
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-phone
+                                a(href="tel:+86-573-8512-0186") +86-573-8512-0186
+                            li.info-list
+                                i.icon.icon-fax
+                                a(href="tel:+86-573-8511-3959") +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                a(href="mailto:sales@bo-re-tech.com") sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Tainan
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-mark
+                                p No.888, Jiuliting Avenue, Caoqiao Street, Pinghu, China.
+                            li.info-list
+                                i.icon.icon-email2
+                                a(href="mailto:sales@bo-re-tech.com") sales@bo-re-tech.com
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

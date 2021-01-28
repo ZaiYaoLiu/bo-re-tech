@@ -1,0 +1,55 @@
+- 
+    var links = [
+        {title:"PET Bottle Recycling Line Recycling from Post-consumer bottles to rPET flakes",img:"../UserFiles/download/download_01_340_480.jpg"},
+        {title:"PET Bottle Recycling Functional Machine Functional Single Machine For PET Recycling",img:"../UserFiles/download/download_01_340_480.jpg"},
+        {title:"PET Bottle Recycling System",img:"../UserFiles/download/download_03_340_480.jpg"},
+        {title:"Polyester Staple Fiber Production Line",img:"../UserFiles/download/download_04_340_480.jpg"},
+        {title:"PET Bottle Recycling Line Recycling from Post-consumer bottles to rPET flakes",img:"../UserFiles/download/download_01_340_480.jpg"},
+        {title:"PET Bottle Recycling Functional Machine Functional Single Machine For PET Recycling",img:"../UserFiles/download/download_02_340_480.jpg"},
+        {title:"PET Bottle Recycling System Recycling from Post-consumer bottles to rPET flakes",img:"../UserFiles/download/download_03_340_480.jpg"},
+        {title:"Polyester Staple Fiber Production Line Functional Single Machine For PET Recycling",img:"../UserFiles/download/download_04_340_480.jpg"},
+        {title:"PET Bottle Recycling Line Recycling from Post-consumer bottles to rPET flakes",img:"../UserFiles/download/download_01_340_480.jpg"},
+        {title:"PET Bottle Recycling Functional Machine",img:"../UserFiles/download/download_02_340_480.jpg"},
+        {title:"PET Bottle Recycling System",img:"../UserFiles/download/download_03_340_480.jpg"},
+        {title:"Polyester Staple Fiber Production Line Functional Single Machine For PET Recycling",img:"../UserFiles/download/download_04_340_480.jpg"},
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#download
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/download/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") e-Catalog
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-110
+                h1.fs_45.black_color.text-center.mb-70 e-Catalog
+                section.row
+                    .col-xs-12
+                        .row.d-flex.flex-wrap
+                            each val in links
+                                .col-lg-3.col-md-4.col-sm-6.col-xs-12.mb-60.galleryRoot
+                                    a(href="javascript:;" target="_blank")
+                                        .gallery.gallery--mask.gallery--download
+                                            img.lazy.w-100.gallery__img(src="../images/blazy_blank.svg" data-src=val.img, alt="")
+                                            .gallery-content.gallery-content--inImg.fs_15.white_color
+                                                i.icon.icon-download.fs_30
+                                        h2.fs_18.mb-25.mt-25=val.title
+                        a.button.button--primary.button--block.white_color.fs_20.text-center(href="javascript:;") Learn More
+
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

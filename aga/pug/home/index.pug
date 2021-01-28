@@ -1,0 +1,115 @@
+mixin exhibitSwiper(img, imgWebp, title, time)
+    li.swiper-slide
+        a(href="../news/detail.html")
+            .card-img.mb-30
+                picture
+                    source(srcset= imgWebp type="image/webp")
+                    img.swiper-lazy(src= img, alt="")
+            p.fs_22.text-center.mb-20= title
+            p.black_light_color.text-center.fs_16= time
+
+
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#home
+        header
+            include ../layout/_navbar.pug
+            .banner
+                .banner__img.haswebp.lazy(data-bg="url('../UserFiles/home/banner_01_1920_900.webp')")
+                .banner__img.nowebp.lazy(data-bg="url('../UserFiles/home/banner_01_1920_900.jpg')")
+                .banner-text
+                    h1.fs_50.mb-30 PET Recycle Solution
+                    p.fs_16.mb-20 Economic PET Bottle-to-bottle Plant Engineering Design and Fabrication
+                    p.fs_16.mb-20 Compact Space Occupation, fda approved
+        main
+            article.BoReTech-article
+                .BoReTechBG.haswebp.lazy(data-bg="url('../UserFiles/home/whe_boretech.webp')")
+                .BoReTechBG.nowebp.lazy(data-bg="url('../UserFiles/home/whe_boretech.jpg')")
+                .container
+                    .row
+                        .col-md-4
+                        .col-md-8.mt-60.mb-60
+                            h2.white_color.fs_45.mb-30.text-capital WHY  BoReTech
+                            ul.numList.pl-40
+                                li.numList__li.fs_16.white_color Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                li.numList__li.fs_16.white_color It is a long established fact that a reader will be distracted by the readable content.
+                                li.numList__li.fs_16.white_color Contrary to Lorem Ipsum is not simply random text. It has roots in a piece of classical  Latin.
+                                li.numList__li.fs_16.white_color There are many variations of passages of Lorem Ipsum available, but the majority
+                                li.numList__li.fs_16.white_color discovered the undoubtable source. Lorem Ipsum comes from sections.
+            article
+                h2.black_color.fs_45.mt-50.mb-50.text-center.text-capital solutions
+                ul.row.mx-0.box
+                    li.col-md-3.col-sm-6.px-0.box-li
+                        .box-li-img
+                            picture
+                                source( data-srcset="../UserFiles/home/solutions_01_480_300.webp" type="image/webp")
+                                img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/home/solutions_01_480_300.jpg", alt="")
+                        .p-40
+                            .fs_28.black_color.mb-30 Washing Line
+                            ul.list-style--disc
+                                li
+                                    a(href="../solutions/detail.html") Food Grade PET Bottle Washing Line
+                                li
+                                    a(href="../solutions/detail.html") Super-clean PET Bottle Washing Line
+                                li
+                                    a(href="../solutions/detail.html") Other Plastics Washing Line
+                                li
+                                    a(href="../solutions/detail.html") Functional Units
+                    li.col-md-3.col-sm-6.px-0.box-li
+                        .box-li-img
+                            picture
+                                source( data-srcset="../UserFiles/home/solutions_02_480_300.webp" type="image/webp")
+                                img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/home/solutions_02_480_300.jpg", alt="")
+                        .p-40
+                            .fs_28.black_color.mb-30 rPET Fiber Production Line
+                            ul.list-style--disc
+                                li
+                                    a(href="../solutions/detail.html") Waste PET Bottles to Polyester Staple Fiber
+                                li
+                                    a(href="../solutions/detail.html") Filamant Yarn Producton Line ( POY / FDY )
+                    li.col-md-3.col-sm-6.px-0.box-li
+                        .box-li-img
+                            picture
+                                source( data-srcset="../UserFiles/home/solutions_03_480_300.webp" type="image/webp")
+                                img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/home/solutions_03_480_300.jpg", alt="")
+                        .p-40
+                            a.fs_28.black_color.mb-30(href="../solutions/detail.html") PET Bottle-to-Bottle Plant
+                                span.fs_16 ( Food Contact )
+                    li.col-md-3.col-sm-6.px-0.box-li
+                        .box-li-img
+                            picture
+                                source( data-srcset="../UserFiles/home/solutions_04_480_300.webp" type="image/webp")
+                                img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/home/solutions_04_480_300.jpg", alt="")
+                        .p-40
+                            a.fs_28.black_color.mb-30(href="../solutions/detail.html") rPET Pelletizing Line
+                                span.fs_16 ( Industrial Pellets )
+            article.exhibitRoot
+                .container.pb-50
+                    h2.black_color.fs_45.mt-50.mb-50.text-center.text-capital exhibitions
+                    .swiper-container.exhibit-swiper.swiper-rectangle-style
+                        ul.swiper-wrapper.card
+                            +exhibitSwiper("../UserFiles/home/exhibitions_01_460_285.jpg", "../UserFiles/home/exhibitions_01_460_285.webp", "CHINAPLAS 2019-China", "2019, Oct 16~23")
+                            +exhibitSwiper("../UserFiles/home/exhibitions_02_460_285.jpg", "../UserFiles/home/exhibitions_02_460_285.webp", "K-SHOW 2019", "2019, Oct 16~23")
+                            +exhibitSwiper("../UserFiles/home/exhibitions_03_460_285.jpg", "../UserFiles/home/exhibitions_03_460_285.webp", "Vietnam Plas 2019", "2019, Oct 16~23")
+                            +exhibitSwiper("https://fakeimg.pl/460x285/", "https://fakeimg.pl/460x285/", "CHINAPLAS 2019-China", "2019, Oct 16~23")
+                            +exhibitSwiper("https://fakeimg.pl/460x285/", "https://fakeimg.pl/460x285/", "K-SHOW 2019", "2019, Oct 16~23")
+                            +exhibitSwiper("https://fakeimg.pl/460x285/", "https://fakeimg.pl/460x285/", "Vietnam Plas 2019", "2019, Oct 16~23")
+                        .swiper-pagination
+                        
+        .aside-community
+            a.icon(href="../contact/index.html" style="background-color: #0068B2")
+                i.icon-email
+            a.icon(href="https://www.facebook.com/PRMTAIWAN/" target="_black" style="background-color: #3B5998")
+                i.icon-facebook
+            a.icon(href="https://www.youtube.com/user/PRMTaiwan" target="_black" style="background-color: #FF0000")
+                i.icon-youtube
+            a.icon(href="javascript:;" target="_black" style="background-color: #01A3E3")
+                i.icon-qq
+            a.icon(href="javascript:;" target="_black" style="background-color: #61A622")
+                i.icon-wechat
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

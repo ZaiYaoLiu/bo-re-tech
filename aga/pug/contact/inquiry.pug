@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#contact_inquiry
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/contact/inquiry/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Inquiry
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-110
+                h1.fs_45.black_color.text-center.mb-30 Inquiry
+                section.row
+                    form.col-xs-12
+                        .form-contact
+                            .form-block
+                                p.fs_20.mt-40.mb-20.form-block__title 1. Please select type
+                                    .row
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="radio" name="Type1")
+                                            p.form-label__title Solutions
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="radio" name="Type1")
+                                            p.form-label__title Products
+                            .form-block
+                                p.fs_20.mb-20.form-block__title 2. Please select Solutions ( more than one answer )
+                                    .row
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Bale Breaker
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Sieving Machine
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Bottle Pre-Washing Machine
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title PVC Label Scrapping Machine
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Crusher
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Horizontal Dryer
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Turbo Washer
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Zig-zag Separator
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title PURIFINES
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Used PET Bottle Washing Line
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title PET Flakes
+                                        label.form-button-label.col-md-3.col-sm-4.col-xs-12
+                                            input.form-label__inputNone(type="checkbox" name="Type2")
+                                            p.form-label__title Fiber
+                                // 後端注意
+                                    form-label 加上class form-label--required 為必填欄位
+                                    input 加上required屬性
+                            .form-block
+                                p.fs_20.mb-20.form-block__title Fields marked with an asterisk <span>*</span> are required.
+                                    .row
+                                        label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                            p.form-label__title Name:
+                                            input.form-label__input(type="text" required)
+                                        label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                            p.form-label__title Phone:
+                                            input.form-label__input(type="tel" required)
+                                        label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                            p.form-label__title Company:
+                                            input.form-label__input(type="text" required)
+                                        label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                            p.form-label__title E-mail:
+                                            input.form-label__input(type="email" required)
+                                        label.form-label.form-label--smallGutter.col-sm-12
+                                            p.form-label__title Address:
+                                            input.form-label__input(type="tel")
+                                        label.form-label.form-label--smallGutter.col-sm-12
+                                            p.form-label__title Main Products:
+                                            input.form-label__input(type="tel")
+                                        .form-label.form-label--smallGutter.col-sm-12
+                                            p.form-label__title Type of Business:
+                                            .form-checkBox
+                                                label.form-checkBox-label
+                                                    input.form-label__inputNone(type="checkbox" name="Type3")
+                                                    .form-label__checkbox
+                                                    p.form-label__title Manufacturer
+                                                label.form-checkBox-label
+                                                    input.form-label__inputNone(type="checkbox" name="Type3")
+                                                    .form-label__checkbox
+                                                    p.form-label__title Trading Company
+                                                label.form-checkBox-label
+                                                    input.form-label__inputNone(type="checkbox" name="Type3")
+                                                    .form-label__checkbox
+                                                    p.form-label__title Agent / Distributor
+                                        label.form-label.form-label--smallGutter.form-label--required.form-label--textarea.col-sm-12
+                                            p.form-label__title Comments:
+                                            textarea.form-label__input(type="text" required)
+                                        label.form-label.form-label--smallGutter.form-label--required.form-label--code.col-md-12
+                                            p.form-label__title Security Code:
+                                            input.form-label__input(type="text" required)
+                                            .form-label__code
+                                                img(src="https://fakeimg.pl/60x20/EEEEEE/", alt="")
+                            button.button.button--primary.button--block.white_color.fs_18.text-center(type="submit") SEND
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

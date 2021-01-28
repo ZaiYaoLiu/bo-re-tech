@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#contact
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/contact/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Contact Us
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-100
+                h1.fs_45.black_color.text-center.mb-30 Contact Us
+                section.row.mb-80
+                    form.col-xs-12
+                        .form-contact
+                            .form-block
+                                // 後端注意
+                                    form-label 加上class form-label--required 為必填欄位
+                                    input 加上required屬性
+                                p.fs_18.text-center.mb-15 Your contact information, please
+                                .row
+                                    label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                        p.form-label__title Name:
+                                        input.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                        p.form-label__title Phone:
+                                        input.form-label__input(type="tel" required)
+                                    label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                        p.form-label__title Company:
+                                        input.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required.col-md-6.col-sm-12
+                                        p.form-label__title E-mail:
+                                        input.form-label__input(type="email" required)
+                                    label.form-label.form-label--smallGutter.col-sm-12
+                                        p.form-label__title Address:
+                                        input.form-label__input(type="tel")
+                                    label.form-label.form-label--smallGutter.col-sm-12
+                                        p.form-label__title Main Products:
+                                        input.form-label__input(type="tel")
+                                    .form-label.form-label--smallGutter.col-sm-12
+                                        p.form-label__title Type of Business:
+                                        .form-checkBox
+                                            label.form-checkBox-label
+                                                input.form-label__inputNone(type="checkbox" name="Type")
+                                                .form-label__checkbox
+                                                p.form-label__title Manufacturer
+                                            label.form-checkBox-label
+                                                input.form-label__inputNone(type="checkbox" name="Type")
+                                                .form-label__checkbox
+                                                p.form-label__title Trading Company
+                                            label.form-checkBox-label
+                                                input.form-label__inputNone(type="checkbox" name="Type")
+                                                .form-label__checkbox
+                                                p.form-label__title Agent / Distributor
+                                    label.form-label.form-label--smallGutter.form-label--required.form-label--textarea.col-sm-12
+                                        p.form-label__title Comments:
+                                        textarea.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required.form-label--code.col-md-12
+                                        p.form-label__title Security Code:
+                                        input.form-label__input(type="text" required)
+                                        .form-label__code
+                                            img(src="https://fakeimg.pl/60x20/EEEEEE/", alt="")
+                            button.button.button--primary.button--block.white_color.fs_18.text-center(type="submit") SEND
+                section.row
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 BoReTech Environmental Engineering co., ltd.
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-mark
+                                p No.888, Jiuliting Avenue, Caoqiao Street, Pinghu, China.
+                            li.info-list
+                                i.icon.icon-phone
+                                p +86-573-8512-0186 
+                            li.info-list
+                                i.icon.icon-fax
+                                p +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                p sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Sales and Project Development
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-phone
+                                p +86-573-8512-0186 
+                            li.info-list
+                                i.icon.icon-fax
+                                p +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                p sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Planning Department
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-phone
+                                p +86-573-8512-0186 
+                            li.info-list
+                                i.icon.icon-fax
+                                p +86-573-8511-3959 
+                            li.info-list
+                                i.icon.icon-email2
+                                p sales@bo-re-tech.com
+                    .col-xs-12.infoRoot
+                        p.info-title.fs_24 Tainan
+                        ul.info.fs_18
+                            li.info-list
+                                i.icon.icon-mark
+                                p No.888, Jiuliting Avenue, Caoqiao Street, Pinghu, China.
+                            li.info-list
+                                i.icon.icon-email2
+                                p sales@bo-re-tech.com
+        
+            iframe.info__map(src='https://www.google.com/maps?q=浙江寶綠特環保技術有限公司&hl=zh-TW&z=16&t=p&output=embed', width='100%', height='460', frameborder='0', style='border:0;', allowfullscreen='')
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

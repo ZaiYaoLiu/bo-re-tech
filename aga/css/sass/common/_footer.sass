@@ -1,0 +1,93 @@
+.footer
+    background-color: #FCFCFC
+    &-menu
+        padding: 50px 0
+        &Root
+            background-color: #FCFCFC
+    &-message
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        +rwdw(991)
+            justify-content: center
+        &__title
+            color: #fff
+            margin-right: 20px
+            +rwdw(767)
+                width: 100%
+                margin-right: 0
+                text-align: center
+                font-size: px(20)
+                margin-bottom: 10px
+        &Root
+            background-color: $gray
+    &__title
+        font-family: $pm
+        color: $primary_2
+        & + .twoList
+            margin-top: 40px
+        & + .linkRoot
+            margin-top: 40px
+    &-copyright
+        position: relative
+        max-width: 1440px
+        width: calc(100% - 30px)
+        margin: 0 auto
+        display: flex
+        padding: 12px 0
+        align-items: center
+        &Root
+            background-color: $primary
+            +rwdw(767)
+                a, span, p
+                    font-size: px(12)
+
+.sendMail
+    display: flex
+    &Root
+        padding: 10px 0
+    &-label
+        +flex
+        flex-wrap: wrap
+    &__input
+        background-color: rgba(#333334, .5)
+        outline: none
+        border: none
+        padding: 14px 22px
+        color: #fff
+        flex: 1
+        +rwdw(767)
+            padding: 14px
+            font-size: px(14)
+    &__enter
+        background-color: #373737
+        color: #fff
+        padding: 15px 22px
+        text-transform: uppercase
+        +rwdw(767)
+            font-size: px(12)
+        &:hover
+            background-color: $primary
+
+.copyright
+    &__p
+        
+        color: #fff
+        text-align: right
+        flex: 1
+    &-other
+        text-align: right
+        width: 33.33333%
+        &__link
+            color: #fff
+            vertical-align: middle
+        &__gutter
+            width: 2px
+            height: 14px
+            background-color: #fff
+            display: inline-block
+            margin: 0 14px
+            vertical-align: middle
+        &__p
+            color: #fff
+            vertical-align: middle

@@ -1,0 +1,58 @@
+- 
+    var links = [
+        {title:"Bale Breaker",img:"../UserFiles/products/products_01_340_210.jpg"},
+        {title:"Sleving Machine",img:"../UserFiles/products/products_02_340_210.jpg"},
+        {title:"Bottle Pre-Washing Machine",img:"../UserFiles/products/products_03_340_210.jpg"},
+        {title:"Bottle Pre-Washing Machine",img:"../UserFiles/products/products_04_340_210.jpg"},
+        {title:"Crusher",img:"../UserFiles/products/products_05_340_210.jpg"},
+        {title:"Horizontal Dryer",img:"../UserFiles/products/products_06_340_210.jpg"},
+        {title:"Turbo Washer",img:"../UserFiles/products/products_07_340_210.jpg"},
+        {title:"Zig-zag Separator",img:"../UserFiles/products/products_08_340_210.jpg"},
+        {title:"Purifines",img:"../UserFiles/products/products_09_340_210.jpg"},
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#products
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/products/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Products
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-100
+                h1.fs_45.black_color.text-center.mb-70 Products
+                .tags
+                    a.fs_28.tags__href.tags__href--active.js-tags(href="javascript:;" data-length="9") Equipment
+                    a.fs_28.tags__href.js-tags(href="javascript:;" data-length="0") Pre-owned Machines
+                    a.fs_28.tags__href.js-tags(href="javascript:;" data-length="0") Materials
+                section.product
+                    .row.d-flex.flex-wrap
+                        each val in links
+                            .col-lg-3.col-md-4.col-sm-6.col-xs-12.mb-60.galleryRoot
+                                a(href="detail.html")
+                                    .gallery
+                                        img.lazy.w-100.gallery__img(src="../images/blazy_blank.svg" data-src=val.img, alt="")
+                                    h2.fs_18.mb-25.mt-25=val.title
+                        
+                    p.text-center.fs_20.link__href.link__href--block Please refer to 
+                        a(href="../solutions/detail.html") PET Bottle Washing Line 
+                        | for further details
+                section.product--none.fs_20.text-center.black_color
+                    p There are currently no used equipment available for sale.
+                    p You can 
+                        a(href="javascript:;") Contact Us 
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

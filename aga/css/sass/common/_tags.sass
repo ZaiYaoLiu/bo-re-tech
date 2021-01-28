@@ -1,0 +1,103 @@
+.tags
+    text-align: center
+    margin: 70px 0 
+    &__href
+        display: inline-block
+        margin: 0 pxTovw(42)
+        transition: .5s
+        &--active
+            color: $primary
+        &:hover,&:focus
+            color: $primary
+    &-list
+    &-titleRoot
+        display: flex
+        flex-wrap: wrap
+        margin: -1px
+        +rwdw(767)
+            margin: -1px 0
+        &__title
+            margin: 1px
+            background-color: $primary_2
+            color: #fff
+            display: inline-block
+            width: calc(100% / 6 - 2px)
+            padding: 15px 5px
+            +rwdw(991)
+                width: calc(100% / 3 - 2px)
+            +rwdw(767)
+                width: 100%
+                margin: 0
+            &--active
+                background-color: $primary
+            &:hover
+                background-color: $primary
+    &-content
+        padding: 24px 30px
+        background-color: rgba(#FDFDFD, .85)
+        border: 1px solid #E3E3E3
+        border-top: none
+        color: #333
+        &__p
+            margin: 6px 0
+            &:not(:last-of-type)
+                &:after
+                    content: '、'
+    &-dropDown
+        position: relative
+        +rwdw(767)
+            width: 100%
+            margin: 0 auto
+        &-title
+            width: 100%
+            background-color: rgba(#FDFDFD, .85)
+            display: none
+            border: 1px solid #E3E3E3
+            border-right: none
+            cursor: pointer
+            +rwdw(767)
+                display: flex
+        &__title
+            flex: 1
+            +flex
+        &-content
+            +rwdw(767)
+                position: absolute
+                top: 100%
+                right: 0
+                left: 0
+                z-index: 1
+                display: none
+        &__button
+            width: 60px
+            height: 50px
+            background-color: #9A9A9B
+            +flex
+            &:after
+                content: ''
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 12px 6px 0 6px
+                border-color: #ffffff transparent transparent transparent
+                transition: .5s
+            &--active
+                background-color: $primary
+                &:after
+                    border-width: 0 6px 12px 6px
+                    border-color: transparent transparent #ffffff transparent
+        &--isShow
+            .tags
+                &-dropDown
+                    &-title
+                        display: flex
+                    &-content
+                        position: absolute
+                        top: 100%
+                        right: 0
+                        left: 0
+                        z-index: 10
+                        display: none
+                &-titleRoot__title
+                    width: 100%
+                    margin: 0

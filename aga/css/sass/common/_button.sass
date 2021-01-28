@@ -1,0 +1,47 @@
+.button
+    max-width: 100%
+    display: inline-block
+    padding: 20px 25px
+    width: 300px
+    &--primary
+        background-color: $primary_3
+    &--block
+        max-width: none
+        min-width: auto
+        width: 100%
+    .icon
+        font-size: px(35)
+        margin-right: 15px
+        min-width: 35px
+        display: inline-block
+        vertical-align: middle
+    span
+        display: inline-block
+        vertical-align: middle
+    &:not(:last-of-type)
+        margin-bottom: 10px
+    &:hover
+        color: #fff
+        background-color: $primary
+
+.icon-close
+    font-size: px(50)
+    max-width: 46px
+    max-height: 46px
+    position: absolute
+    right: -25px
+    top: -25px
+    background-color: #fff
+    border-radius: 50%
+    &:hover
+        transform: scale(1.1)
+
+.arrowBtn
+    width: 58px
+    height: 58px
+    background-color: $primary_2
+    +flex($dis: inline-flex)
+    margin: 0 5px
+    cursor: pointer
+    .icon
+        color: #fff

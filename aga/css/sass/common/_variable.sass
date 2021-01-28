@@ -1,0 +1,124 @@
+$browser-default-font-size: 15px !default
+
+body
+    font-family: 'HelveticaNeueLTPro-Roman', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+    // width: 100vw
+    // overflow: initial
+html
+    font-size: $browser-default-font-size
+
+$primary: #6fb52c
+$primary_2: #035592
+$primary_3: #0068B2
+
+$gray: #4A4A4A
+
+$pm: 'HelveticaNeueLTPro-Md', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif;
+$ms: 'Microsoft JhengHei'
+$Ffme_asb: 'Myriad Pro Semibold','微軟正黑體','Microsoft JhengHei', Arial, sans-serif;
+$mmb: 'Myriad Pro Bold','微軟正黑體','Microsoft JhengHei', Arial, sans-serif;
+$mm: 'Myriad Pro','微軟正黑體','Microsoft JhengHei', Arial, sans-serif;
+
+
+@function rem($px)  //rem可以改成你想使用的名稱
+    @return $px / $browser-default-font-size * 1rem
+
+@mixin font-size($size: 16) 
+    font-size: ($size/16) + rem
+@function px($px)
+    @return $px / 16 * 1rem
+
+@function pxTovw($px)
+    @return $px / 1920 * 100vw
+
+@mixin fixed($l:auto,$r:auto,$z:1)
+    position: fixed
+    top: 0
+    left: $l
+    right: $r
+    z-index: $z
+
+@mixin flex($dis:flex,$jc:center,$ai:center)
+    display: $dis
+    justify-content: $jc
+    align-items: $ai
+
+@mixin rwdw($max)
+    @media only screen and (max-width: $max + px)  
+        @content
+
+@mixin rwdmw($min)
+    @media only screen and (min-width: $min + px)  
+        @content
+
+@mixin rwdh($max)
+    @media only screen and (max-height: $max + px)  
+        @content
+
+@mixin rwdmh($min)
+    @media only screen and (min-height: $min + px)  
+        @content
+
+@mixin pseudo($w:100px,$h:100px)
+    content: ''
+    width: $w
+    height: $h
+    display: inline-block
+
+@mixin fshm($fm:$Ffmc,$fs:rem(14),$lh:px(20),$mb:0)
+    font-family: $fm
+    font-size: $fs
+    line-height: $lh
+    margin: $mb
+
+/* display: flex 置中*/
+@mixin flex-center 
+    display: flex
+    justify-content: center
+    align-items: center
+/* display: flex 置中*/
+
+// html
+//     +rwdw(768)
+//         font-size: 15px
+header
+    z-index: auto
+.fs_16
+    font-size: 1.066667rem
+.d-flex
+    display: flex
+.flex-wrap
+    flex-wrap: wrap
+.d-block
+    display: block
+.mx-auto
+    margin: 0 auto
+.ml-auto
+    margin-left: auto
+.mr-auto
+    margin-right: auto
+.mx-0
+    margin-right: 0
+    margin-left: 0
+.px-0
+    padding-right: 0
+    padding-left: 0
+.p-40
+    padding: 40px
+.pos-r
+    position: relative
+.pos-a
+    position: absolute
+
+.text-capital
+    text-transform: uppercase
+
+.pl-40
+    padding-left: 2.66667rem
+
+.w-100
+    width: 100%
+
+@media (max-width:991px)
+    .text-md-center
+        text-align: center

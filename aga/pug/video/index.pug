@@ -1,0 +1,53 @@
+- 
+    var links = [
+        {title:"12000 kg/h PET Bottle Recycling Line in China",img:"../UserFiles/video/video_01_340_210.jpg"},
+        {title:"3000 kg/h PET Bottle Recycling Line for USA",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"IAS systemPlant",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"The First PET Bottle Washing Line for Food ",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"3000 kg/h PET Bottle Recycling Line for USA",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"3000 kg/h PET Bottle Recycling Line for USA",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"IAS systemPlant",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"The First PET Bottle Washing Line for Food ",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"3000 kg/h PET Bottle Recycling Line for USA",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"3000 kg/h PET Bottle Recycling Line for USA",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"IAS systemPlant",img:"../UserFiles/video/video_default_340_210.jpg"},
+        {title:"The First PET Bottle Washing Line for Food ",img:"../UserFiles/video/video_default_340_210.jpg"},
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#download
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/video/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item") Video
+                            meta(itemprop="position" content="2")
+        main
+            .container.mt-110.mb-110
+                h1.fs_45.black_color.text-center.mb-70 Video
+                .row
+                    .col-xs-12
+                        .row.d-flex.flex-wrap
+                            each val in links
+                                .col-lg-3.col-md-4.col-sm-6.col-xs-12.mb-60.galleryRoot
+                                    a(href="javascript:;")
+                                        .gallery.gallery--video
+                                            img.lazy.w-100.gallery__img(src="../images/blazy_blank.svg" data-src=val.img, alt="")
+                                            i.icon.icon-play.fs_50.white_color
+                                        h2.fs_18.mb-25.mt-25=val.title
+                        .container
+                            a.button.button--primary.button--block.white_color.fs_20.text-center(href="javascript:;") Learn More
+
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

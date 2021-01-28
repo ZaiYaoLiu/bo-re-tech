@@ -1,0 +1,99 @@
+.header
+    display: flex
+
+.logo
+    +rwdw(767)
+        width: 180px
+
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    background-color: #fff
+    .container
+        display: flex
+        align-items: center
+    &-meun
+        display: flex
+        align-items: center
+        flex: 1
+    &-root
+        margin: 0 auto
+        height: 100%
+    &-nav
+        display: flex
+    &-earth
+        margin: 0 pxTovw(30)
+        font-size: 35px
+        color: $primary
+        cursor: pointer
+        +rwdw(991)
+            display: none
+    &__li
+        margin-right: pxTovw(30)
+        margin-left: pxTovw(30)
+        padding-right: pxTovw(10)
+        position: relative
+        +rwdw(1281)
+            margin-right: pxTovw(20)
+            margin-left: pxTovw(20)
+        &:first-of-type
+            margin-left: 0
+        &:last-of-type
+            margin-right: 0
+        &:hover
+            .navbar__link
+                color: $primary
+                transition: none
+            &:after
+                border-top-color: $primary
+                border-right-color: $primary
+        &--hasFloor
+            &:after
+                content: ''
+                position: absolute
+                width: 8px
+                height: 8px
+                border-top: 2px solid #000
+                border-right: 2px solid #000
+                top: 50%
+                right: -8px
+                transform: translateY(-50%) rotate(135deg)
+                margin-top: -2px
+                +rwdw(1200)
+                    width: 8px
+                    height: 8px
+            &:hover
+                .twoList
+                    display: block
+        &--unJust1
+            .twoList-li:last-of-type
+                a
+                    margin-bottom: 0
+        &--active
+            &:after
+                border-top-color: $primary
+                border-right-color: $primary
+            .navbar__link
+                color: $primary
+            
+    &__link
+        padding: 42px 0
+        display: block
+        font-family: $pm
+        white-space: nowrap
+        font-size: px(18)
+        +rwdw(1281)
+            font-size: px(15)
+    &--scroll
+        box-shadow: 0 0 10px rgba(#333, .5)
+
+.menu-icon
+    min-width: 25px
+    color: #000000
+    font-size: px(20)
+    cursor: pointer
+    +rwdw(991)
+        color: $primary

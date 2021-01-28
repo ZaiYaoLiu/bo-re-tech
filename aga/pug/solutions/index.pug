@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#solutions
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/solutions/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Solutions
+                            meta(itemprop="position" content="2")
+        main
+            article.container.mt-110.mb-45
+                h1.fs_45.black_color.text-center.mb-70 Solutions
+                section.row.d-flex.flex-wrap
+                    .col-md-6
+                        img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/solutions/solutions_01_700_315.jpg", alt="")
+                        .pt-40.pb-40
+                            h2.mb-25
+                                .fs_28.black_color Washing Line
+                            ul.twoList-secondFloor.twoList-secondFloor--page
+                                li.secondFloor-li
+                                    a(href="detail.html") Food Grade PET Bottle Washing Line
+                                li.secondFloor-li
+                                    a(href="detail.html") Super-clean PET Bottle Washing Line
+                                li.secondFloor-li
+                                    a(href="detail.html") Other Plastics Washing Line
+                                li.secondFloor-li
+                                    a(href="detail.html") Functional Units
+                    .col-md-6
+                        img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/solutions/solutions_02_700_315.jpg", alt="")
+                        .pt-40.pb-40
+                            h2.mb-25
+                                .fs_28.black_color rPET Fiber Production Line
+                            ul.twoList-secondFloor.twoList-secondFloor--page
+                                li.secondFloor-li
+                                    a(href="detail.html") Waste PET Bottles to Polyester Staple Fiber
+                                li.secondFloor-li
+                                    a(href="detail.html") Filamant Yarn Producton Line ( POY / FDY )
+                    .col-md-6
+                        img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/solutions/solutions_03_700_315.jpg", alt="")
+                        .pt-40.pb-40
+                            h2.mb-25
+                                a.fs_28.black_color.twoList-title(href="detail.html") rPET Pelletizing Line
+                                    span.fs_18.mt-10 ( Industrial Pellets )
+                    .col-md-6
+                        img.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/solutions/solutions_04_700_315.jpg", alt="")
+                        .pt-40.pb-40
+                            h2.mb-25
+                                a.fs_28.black_color.twoList-title(href="detail.html") PET Bottle-to-Bottle Plant 
+                                    span.fs_18.mt-10 ( Food Contact )
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

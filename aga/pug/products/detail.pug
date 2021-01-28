@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#products_detail
+        header
+            include ../layout/_navbar.pug
+            .swiper-container.bannerPage.swiper-primary-style
+                .swiper-wrapper
+                    .swiper-slide
+                        img.swiper-lazy(data-src="../UserFiles/products/detail/banner_01_1920_550.jpg", alt="")
+                    .swiper-slide
+                        img.swiper-lazy(data-src="https://fakeimg.pl/1920x550/", alt="")
+                    .swiper-slide
+                        img.swiper-lazy(data-src="https://fakeimg.pl/1920x550/", alt="")
+                .swiper-pagination
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../products/index.html" itemprop="item")
+                                span(itemprop="name") Products
+                            meta(itemprop="position" content="2")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Bale Breaker
+                            meta(itemprop="position" content="3")
+        main
+            article.mt-110.mb-100
+                h1.fs_45.black_color.text-center.mb-70 Bale Breaker
+                section.black_color
+                    .container
+                        .row.graphic-text
+                            .col-lg-9
+                                .row
+                                    section.col-xs-12.graphic--second
+                                        h2.fs_28.graphic__title Description
+                                        p.fs_18.graphic__p BoReTech develops two types (Horizontal & Vertical De-baler )of bale breakers on the basis of PET bottle balers dimension and materials conditions which capacity reachs up to 10000 kg/h. Bale breaker shaft adopts carbon steel and paddles adopts alloy steel which is dismountable. BoReTech Bale Breaker has two designs, one has two shafts, the other one has four shafts. Moving speed of belt conveyor and chain conveyor is adjustable, which can avoid clogging. Bale breaker  has the features of simple operation process,low power consumption and less manpower.
+                                    section.col-xs-12.graphic--second
+                                        h2.fs_28.graphic__title Futrue
+                                        ul.fs_18.graphic-list.graphic-list--decimal
+                                            li BoReTech develops two types (Horizontal & Vertical De-baler )
+                                            li bale breakers on the basis of PET bottle balers dimension and materials
+                                            li conditions which capacity reachs up to 10000 kg/h. 
+                                            li Bale breaker shaft adopts carbon steel and paddles adopts alloy steel which is dismountable.
+                                            li BoReTech Bale Breaker has two designs, one has two shafts.
+                                    section.col-xs-12.graphic--second
+                                        h2.fs_28.graphic__title Data
+                                        p.fs_18.graphic__p roin et commodo turpis. Aenean sodales molestie mi at posuere. In convallis viverra nisl, eu consequat eros tincidunt in. Duis id iaculis turpis, sed fringilla leo. In quis blandit tortor, ut sodales sapien. Cras egestas scelerisque sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc lacinia ligula et neque venenatis ultrices. Integer lacus dui, ornare id nisl vitae, rutrum vulputate erat. Nunc ultricies urna ac cursus rutrum. Etiam nec velit sit amet ipsum varius porta. Nulla euismod rutrum urna, id sollicitudin nunc suscipit eu. Donec in turpis sed dui dignissim blandit feugiat nec ante. Nulla facilisi. Praesent erat libero, interdum vel velit at, ornare feugiat nunc.
+                            .col-lg-3.mt-40.mb-40
+                                a.button.button--primary.js-lightbox-open(href="javascript:;" data-open="js-lightbox-Quotation")
+                                    i.icon.icon-more.white_color
+                                    span.white_color.fs_16 Request for Quotation
+                                a.button.button--primary(href="javascript:;")
+                                    i.icon.icon-pdf.white_color
+                                    span.white_color.fs_16 Brochure Download
+                section.graphic--second.black_color.pt-70.pb-70(style="background-color: #F9F9F9")
+                    .container
+                        h2.fs_28.graphic__secondTitle 3D How it works
+                        .graphic-img
+                            img.mt-50(src="../UserFiles/solutions/detail/solution_product.png", alt="")
+                            .img__circle(style="top: 30%; left: 24%") 1
+                            .img__circle(style="top: 60%; left: 32%") 2
+                            .img__circle(style="top: 19%; left: 51.5%") 3
+                            .img__circle(style="top: 60%; left: 65%") 4
+                            .img__circle(style="top: 28%; left: 75.5%") 5
+                            .img__circle(style="top: 33%; left: 86.5%") 6
+                        ul.fs_18.graphic-list.graphic-list--decimal
+                            li text here
+                            li Lorem Ipsum .
+                            li text of the printing and typesetting industry.
+                            li Lprinting and typesetting industry.
+                            li typesetting industry.
+                section.graphic--second.black_color
+                    .container
+                        h2.fs_28.graphic__secondTitle Gallery
+                        .row.mt-40.mb-20
+                            .col-md-3.col-sm-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img.js-media-open(style="background-image: url(../UserFiles/products/detail/products_01.jpg)", data-media-channel="img")
+                                    i.icon.icon-magnifier.white_color.fs_45
+                            .col-md-3.col-sm-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img.js-media-open(style="background-image: url(../UserFiles/products/detail/products_02.jpg)", data-media-channel="img")
+                                    i.icon.icon-magnifier.white_color.fs_45
+                            .col-md-3.col-sm-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img.js-media-open(style="background-image: url(../UserFiles/products/detail/products_03.jpg)", data-media-channel="img")
+                                    i.icon.icon-magnifier.white_color.fs_45
+                
+                section.graphic--second.black_color
+                    .container
+                        h2.fs_28.graphic__secondTitle Successful Project
+                        .row.mt-20.d-flex.flex-wrap
+                            .col-md-3.col-xs-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img(style="background-image: url(../UserFiles/products/detail/successful_01.jpg)")
+                                p.fs_18.mt-20 PET Bottle Washing Line for Domestic PET Bale Material
+                            .col-md-3.col-xs-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img(style="background-image: url(../UserFiles/products/detail/successful_02.jpg)")
+                                p.fs_18.mt-20 The First Project to Poland-A smart PET Bottle Washing Line
+                section.container
+                    a.button.button--primary.button--block.white_color.fs_20.text-center(href="javascript:history.go(-1)") BACK
+            article.lightboxRoot.js-lightbox-Quotation
+                .lightbox
+                    .lightbox-close.js-lightbox-close
+                    .lightbox-container
+                        form.lightbox-block.black_color.form(action="")
+                            button.icon.icon-close.js-lightbox-close(type="reset")
+                            p.fs_45.mb-40 Food Grade PET Bottle Washing Line
+                            p.fs_28.form__subtitle *The end product of BoReTech PET bottle washing line is rPET flakes,
+                            ul
+                                li.form-block
+                                    p.fs_18 Q. Is your company in the field of PET recycling Industry?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question1")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Yes
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question1")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p no
+                                li.form-block
+                                    p.fs_18 Q. Which industry is your company currently engaged in as below?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p PET bottle recycling factory
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Polyester fiber production and downstream manufacturer
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p PET Pelletizing and downstream manufacturer
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18
+                                                p.form-check__p Sheet manufacturer and downstream manufacturer
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18
+                                                p.form-check__p PET bottle blowing Factory
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question2")
+                                            .form-label__radio
+                                            .form-check.fs_18
+                                                p.form-check__p Others
+                                                input.form-check__input.fs_15(type="text")
+                                li.form-block
+                                    p.fs_18 Q. Is the PET bottles the object you need to recycle?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question3")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Yes
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question3")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p no
+                                li.form-block
+                                    p.fs_18 Q. Which one are you looking for as below?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question4")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p PET bottle washing line (system)
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question4")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Functional single machine of PET bottle recycling, like crusher, PVC label scraper,etc.
+                                li.form-block
+                                    p.fs_18 Q. Does your company already have a PET bottle recycling line in operation? (if so, supplier)
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question5")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Yes, Supplier
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question5")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p no
+                                li.form-block
+                                    p.fs_18 Q. What's the capacity of your PET bottle recycing line in operation?
+                                    .form-check.fs_18
+                                        input.form-check__input.fs_15(type="text")
+                                li.form-block
+                                    p.fs_18 Q. Does your company already have a PET bottle recycling line in operation? (if so, supplier)
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 500 kg/h
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 1500
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 3000 kg/h
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 4500
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 6000 kg/h
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p 10000
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question6")
+                                            .form-label__radio
+                                            .form-check.fs_18
+                                                p.form-check__p Others
+                                                input.form-check__input.fs_15(type="text")
+                                li.form-block
+                                    p.fs_18 Q. What's your target grade /application of the rPET flakes  ?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Fiber Grade
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Label Content (ppm):
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Metal Content (ppm) :
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p PP/PE Content (ppm):
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Moisture Content (ppm):
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Glue Content (ppm):
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question7")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Total Impurity (ppm):
+                                li.form-block
+                                    p.fs_18 Q. Does your company have a factory/space avaiable for the new washing line in hand ?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question8")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Yes
+                                                input.form-check__input.fs_15(type="text" placeholder="Please indicate which country/area are you going to set up your new line?")
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question8")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p No
+                                li.form-block
+                                    p.fs_18 Q. What's your budget for the PET bottle washing line?
+                                    .form-check.fs_18
+                                        input.form-check__input.fs_15(type="text")
+                                li.form-block
+                                    p.fs_18 Q. Does your company have a factory/space avaiable for the new washing line in hand ?
+                                    .form-select
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question9")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Internet Search
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question9")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Exhibition, Industry Meeting
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question9")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Magazine,paper
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question9")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Introduced by friend, association
+                                        label.form-label
+                                            input.form-label__inputNone(type="radio" name="question9")
+                                            .form-label__radio
+                                            .form-check.fs_18 
+                                                p.form-check__p Others
+                                                input.form-check__input.fs_15(type="text")
+                            p.fs_28 Your contact information, please
+                            .form-contact
+                                // 後端注意
+                                    form-label 加上class form-label--required 為必填欄位
+                                    input 加上required屬性
+                                .form-block
+                                    label.form-label.form-label--smallGutter.form-label--required
+                                        p.form-label__title Company:
+                                        input.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required
+                                        p.form-label__title Contact Person:
+                                        input.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required
+                                        p.form-label__title Job Title:
+                                        input.form-label__input(type="text" required)
+                                    label.form-label.form-label--smallGutter.form-label--required
+                                        p.form-label__title E-mail:
+                                        input.form-label__input(type="email" required)
+                                    label.form-label.form-label--smallGutter.form-label--required
+                                        p.form-label__title Phone:
+                                        input.form-label__input(type="tel" required)
+                                    label.form-label.form-label--smallGutter
+                                        p.form-label__title Web Site:
+                                        input.form-label__input(type="url")
+                                    label.form-label.form-label--smallGutter
+                                        p.form-label__title
+                                        button.button.button--primary.button--block.white_color.fs_18.text-center(type="submit") SEND
+            article.mediaLightRoot
+                .mediaLightBG.js-media-close
+                .mediaLight
+                    .mediaLight-container
+        
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

@@ -1,0 +1,151 @@
+.graphic
+    &__p
+        line-height: 1.5
+        margin: 40px 0
+    &-text
+    &-list
+        line-height: 1.5
+        margin-top: 40px
+        &--disc
+            list-style: disc
+            &.fs_24
+                margin-left: 24px
+            &.fs_20
+                margin-left: 20px
+        &--decimal
+            list-style: decimal
+            margin-left: 20px
+            &.fs_24
+                margin-left: 24px
+            &.fs_20
+                margin-left: 20px
+    &-img
+        position: relative
+        img
+            width: 100%
+    &--second
+        margin: 75px 0
+        float: none
+        &:first-of-type
+            margin-top: 0
+
+.imgInText
+    float: none
+    line-height: 1.5
+
+.gallery
+    position: relative
+    cursor: pointer
+    overflow: hidden
+    display: block
+    margin: 10px 0
+    &__img
+        background-position: center center
+        background-size: cover
+        transition: .5s
+        &--border
+            border: 1px solid #ccc
+    .icon
+        position: absolute
+        right: 20px
+        bottom: 20px
+    &--4
+        .gallery__img
+            padding-bottom: 61.7647%
+    &--3
+
+    &--2
+        .gallery__img
+            padding-bottom: 100%
+    &Root
+        z-index: 1
+        h2
+            line-height: 1.5
+        .gallery, a
+            &:hover
+                .gallery
+                    &__img
+                        transform: scale(1.05) rotate(0.02deg)
+                    &--mask
+                        &:before
+                            background-color: rgba(#6FB52C, .8)
+                    &--download
+                        .gallery-content--inImg
+                            opacity: 1
+    &-content
+        &-row
+            display: flex
+            align-items: center
+            &:not(:last-of-type)
+                margin-bottom: 10px
+        &__title
+            flex: 1
+            max-width: 100px
+        &__p
+            flex: 1
+        &--inImg
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 2
+            padding: 18px
+    &--mask
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background-color: rgba(#000, .4)
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background-color: transparent
+            z-index: 1
+            transition: .5s
+    &--download
+        border: 1px solid #eee
+        &:after
+            content: none
+        .gallery-content--inImg
+            padding: 0
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            +flex
+            opacity: 0
+            transition: .5s
+            .icon
+                position: static
+    &--video
+        .icon
+            left: 15px
+            bottom: 15px
+            right: auto
+            box-shadow: 0px 0px 10px rgba(#ccc, .5)
+            border-radius: 50%
+
+.img
+    &__circle
+        position: absolute
+        width: pxTovw(50)
+        height: pxTovw(50)
+        border-radius: 50%
+        background-color: $primary_3
+        +flex
+        font-size: pxTovw(26)
+        color: #fff
+        z-index: 1
+        +rwdw(991)
+            font-size: pxTovw(30)
+        +rwdw(767)
+            width: 20px
+            height: 20px

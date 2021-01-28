@@ -1,0 +1,62 @@
+- 
+    var links = [
+        {title:"Bale Breaker",img:"../UserFiles/products/products_01_340_210.jpg"},
+    ]
+
+<!DOCTYPE html>
+html(lang="en")
+    include ../layout/_head.pug
+    body#news_detail
+        header
+            include ../layout/_navbar.pug
+            img.bannerPage.lazy(src="../images/blazy_blank.svg" data-src="../UserFiles/news/detail/banner_01_1920_415.jpg", alt="")
+            .container
+                .breadcrumbRoot
+                    span ::
+                    ul.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../home/index.html" itemprop="item")
+                                span(itemprop="name") Home
+                            meta(itemprop="position" content="1")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="../news/index.html" itemprop="item")
+                                span(itemprop="name") Exhibitions
+                            meta(itemprop="position" content="2")
+                        li.breadcrumb-li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+                            a(href="javascript:;" itemprop="item")
+                                span(itemprop="name") Exhibitions Title
+                            meta(itemprop="position" content="3")
+        main
+            article.mt-110.mb-100
+                .container.mb-50
+                    h1.fs_45.black_color.text-center.mb-15 Exhibitions Title
+                    p.text-center.mb-20 2019-10-16
+                    .share
+                        a.share-title(href="javascript:;")
+                            p.share-title__title.fs_16 SHARE
+                            i.icon.icon-facebook2.fs_28
+                section.graphic--second.black_color
+                    .container
+                        .row
+                            .col-md-4.col-sm-6.galleryRoot
+                                .gallery.gallery--4
+                                    .gallery__img.gallery__img--border.js-media-open.lazy-bg(style="background-image: url(../UserFiles/news/detail/news_01_455_285.jpg)", data-media-channel="img")
+                                    i.icon.icon-magnifier.white_color.fs_45
+                            .col-lg-12.w-100.fs_18.imgInText
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type in the 1960s with the release of  in the 1960s with the release of  specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    br
+                                    br
+                                    | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less norm
+                                    br
+                                    br
+                                    | distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                        a.button.button--primary.button--block.white_color.fs_20.text-center.mt-70(href="javascript:history.go(-1)") BACK
+            article.mediaLightRoot
+                .mediaLightBG.js-media-close
+                .mediaLight
+                    .mediaLight-container       
+
+        include ../layout/_footer.pug
+        include ../layout/_footer_js.pug
+        

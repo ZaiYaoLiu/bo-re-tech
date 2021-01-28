@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .img{
+            max-width: 100%;
+            background-size: cover;
+            background-position: center center;
+            padding-bottom: 75%;
+        }
+    </style>
+    <script>
+        // 原生 JavaScript 加载样式文件
+        function loadCSS(url) {
+            try {
+                document.createStyleSheet(url);
+            } catch(e) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                //link.type = 'text/css';
+                link.href = url;
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+        }
+        loadCSS('style.css')
+    </script>
+</head>
+<body>
+    <h2>使用img</h2>
+    <br>
+    <picture>
+        <source data-srcset="test01.webp" media="(min-width: 961px)"  type="image/webp">
+        <source data-srcset="test02.webp" media="(max-width: 960px)" type="image/webp">
+        <img class="lazy" data-src="test01.jpg" alt="">
+    </picture>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>使用背景圖</h2>
+    <br>
+    <div class="img lazy haswebp" data-bg="url('test02.webp')"></div>
+    <div class="img lazy nowebp" data-bg="url('test02.jpg')"></div>
+
+    <script defer src="modernizr-custom.js"></script>
+    <script defer src="lazyload/lazyload.min.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.7.0/polyfill.min.js"></script>
+
+    <script defer src="main-dist.js"></script>
+</body>
+</html>

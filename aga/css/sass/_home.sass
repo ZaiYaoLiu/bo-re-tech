@@ -1,0 +1,53 @@
+#home
+    &.bg
+        background-attachment: fixed
+        background-size: cover
+    .footer
+        background-color: transparent
+
+.BoReTech
+    &-article
+        position: relative
+        min-height: 380px
+        .container
+    &BG
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-size: cover
+        background-position: center center
+
+.exhibit
+    &Root
+        background-color: #F1F1F1
+    &-swiper
+        padding-bottom: 40px
+
+.banner
+    position: relative
+    &__img
+        padding-bottom: 46.875%
+        background-size: cover
+        background-position: center left
+        +rwdw(767)
+            padding-bottom: 0px
+            height: 381.75px
+    &-text
+        position: absolute
+        right: pxTovw(160)
+        bottom: pxTovw(125)
+        max-width: 400px
+        color: #000
+        +rwdw(767)
+            right: 0
+            bottom: 0
+            left: 0
+            width: 100%
+            max-width: none
+            padding: 20px
+            background-color: rgba(#000, .4)
+            color: #fff
+        p
+            line-height: 1.2
